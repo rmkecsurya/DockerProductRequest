@@ -1,0 +1,13 @@
+version: '3'
+services:
+ microsoft:
+  image: mcr.microsoft.com/presidio-analyzer
+  ports:
+   - 3001:3000
+ postgres:
+  image: postgres:13
+  ports:
+  - 3002:3000
+ myapp:
+  build: .
+  
