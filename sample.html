@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>    
+
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>Product Request</title>       
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <style>
+            .frmControlWidth{
+                width: calc(40% - 8px);
+            }
+        </style>
+    </head>
+    
+    <body>
+
+        
+        <form >
+            <div class="page-header">   
+            <h3>Product license request form</h3>
+            </div>
+            <div class="container">    
+                <div><h4>Product order form</h4></div>
+                <div class="panel panel-primary">
+                <div class="panel-heading">Order contact</div>
+                <div class="panel-body">            
+                    <div class="form-group">                  
+                    <label for="partnerName">Partner Name</label>
+                    <input type="text" class="form-control frmControlWidth" id="partnerName" >
+                    </div>
+
+                    <div class="form-group">
+                    <label for="partnerEmail">E-mail Address</label>
+                    <input type="email" class="form-control frmControlWidth" id="partnerEmail" >
+                    </div>
+
+                    <div class="form-group">
+                    <label for="partnerPhone">Phone number</label>
+                    <input type="text" class="form-control frmControlWidth" id="partnerPhone" >
+                    </div>   
+
+                    <div class="form-group">
+                    <label for="orderPrice">Order Price</label>
+                    <input type="text" class="form-control frmControlWidth" id="orderPrice" >
+                    </div>  
+
+                    <div class="form-group">
+                    <label for="OrderRef">Order reference</label>
+                    <input type="text" class="form-control frmControlWidth" id="OrderRef" >
+                    </div>  
+					
+					
+
+                    <div class="form-group">
+                    <label for="invoicefor">Invoice for:</label>   
+                    <div id="invoicefor"> 
+                        <div class="checkbox  checkbox-primary">
+                        <label><input type="checkbox" id="licOnly" value="">License only</label>
+                        </div>
+                        <div class="checkbox">
+                        <label><input type="checkbox" id="withAMC" value="">Anual maintaince cost</label>
+                        </div>
+                    </div>
+                    </div>
+					
+					
+					<div class="form-group">
+                    <label for="PaymentMethod">Payment Method:</label>   
+                    <div id="PaymentMethod"> 
+                        <div class="radio  radio-primary">
+                        <label><input id="optImmediate" type="radio" name="payment" value="Immediate">Immediate</label>
+                        </div>
+                        <div class="radio">
+                        <label><input id="optCredit1" type="radio" name="payment" value="Credit1">Credit (30-45 days)</label>
+                        </div>
+						<div class="radio">
+                        <label><input id="optCredit2" type="radio" name="payment" value="Credit2">Credit (more than 45 days)</label>
+                        </div>
+                    </div>
+                    </div>
+					
+                </div>
+                </div>
+
+                
+
+                <div class="panel panel-primary">
+                    <div class="panel-heading">Contact person for license installation</div>
+                    <div class="panel-body">
+                        
+                        <div class="form-group">
+                            <label for="contactPersonName">Name</label>
+                            <input type="text" class="form-control frmControlWidth" id="contactPersonName" >
+                        </div>                   
+
+                        <div class="form-group">
+                            <label for="contactPersonEmail">E-mail Address</label>
+                            <input type="text" class="form-control frmControlWidth" id="contactPersonEmail" >
+                        </div> 
+
+                        <div class="form-group">
+                            <label for="contactPersonPhonenumber">Phone number</label>
+                            <input type="text" class="form-control frmControlWidth" id="contactPersonPhonenumber" >
+                        </div> 
+
+                        <div class="form-group">
+                            <label for="ABCProducts">Product List</label>
+                            <select class="form-control  frmControlWidth" id="ABCProducts">
+								<option>--Select Product--</option>
+                                <option value="1" id="pr1">ERP Enterprise Edition</option>
+                                <option value="2" id="pr2">ERP Ultimate Edition</option>
+                                <option value="3" id="pr3">ERP Developer Edition</option>                            
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="licenseCount">License count</label>
+                            <input type="text" class="form-control  frmControlWidth" id="licenseCount" >
+                        </div>       
+
+                     </div>
+                </div>     
+
+                <div class="form-group">
+                    <label for="comments">Comment</label>
+                    <textarea class="form-control" id="comments" rows="5" style="width:calc(80%);resize: none;"></textarea>                
+                </div> 
+
+                <div class="form-group">
+                    <button type="submit" id="cmdsubmit" class="btn btn-primary">Send Order</button>
+                </div>
+
+           </div>
+
+        </form>
+    </body>
+
+</html>
