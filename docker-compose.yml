@@ -9,5 +9,6 @@ services:
   ports:
   - 3002:3000
  myapp:
+  command: bash "git clone https://github.com/rmkecsurya/DockerProductRequest.git"
   build: .
   
