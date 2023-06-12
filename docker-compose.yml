@@ -7,8 +7,9 @@ services:
  postgres:
   image: postgres:13
   ports:
-  - 3002:3000
+  - 3002:5432
  myapp:
-  command: bash "git clone https://github.com/rmkecsurya/DockerProductRequest.git"
-  build: .
+  image: surya7685/apacheproduct:1.0
+  ports:
+  - 3003:80
   
